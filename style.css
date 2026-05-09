@@ -1,7 +1,7 @@
 /* style.css */
 :root {
-    --primary-color: #ff6b6b;
-    --secondary-color: #feca57;
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
     --background-color: #f7f9fc;
     --card-background: #ffffff;
     --text-color: #2d3436;
@@ -33,7 +33,7 @@ body {
 
 .top-bar {
     width: 90%;
-    max-width: 480px;
+    max-width: 500px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,7 +49,6 @@ body {
     text-decoration: none;
     color: var(--text-color);
     opacity: 0.5;
-    transition: opacity 0.3s;
 }
 
 .lang-switch a.active {
@@ -74,119 +73,84 @@ body {
     border-radius: 25px;
     cursor: pointer;
     font-weight: 600;
-    box-shadow: 0 2px 8px var(--shadow-color);
-    transition: all 0.3s ease;
-    font-size: 0.85rem;
 }
 
 .card {
     background-color: var(--card-background);
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 24px;
     box-shadow: 0 15px 35px var(--shadow-color);
     width: 90%;
-    max-width: 480px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    max-width: 500px;
 }
 
-h1 {
-    margin-bottom: 2.5rem;
-    font-size: 2rem;
-}
+h1 { margin-bottom: 0.5rem; font-size: 1.8rem; }
+.subtitle { margin-bottom: 2rem; opacity: 0.7; }
 
-.menu-display {
+.test-area {
     background-color: var(--accent-bg);
-    padding: 2.5rem;
     border-radius: 18px;
-    margin-bottom: 2.5rem;
-    min-height: 100px;
+    aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
 }
 
-#recommended-menu {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    transition: opacity 0.3s ease;
+#webcam-container canvas, #image-preview {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
 }
 
-.fade-out {
-    opacity: 0;
+.btn-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .btn {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: #fff;
     border: none;
-    padding: 1.2rem 3rem;
-    font-size: 1.3rem;
-    border-radius: 15px;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
-    transition: all 0.3s ease;
-    font-weight: 700;
-    width: 100%;
-}
-
-.btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(255, 107, 107, 0.4);
-    filter: brightness(1.05);
-}
-
-.btn:active {
-    transform: translateY(-1px);
-}
-
-/* Contact Form Styles */
-.contact-card {
-    text-align: left;
-}
-
-.contact-card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-.form-group label {
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.form-group input,
-.form-group textarea {
     padding: 1rem;
-    border-radius: 12px;
-    border: 2px solid var(--accent-bg);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: inherit;
     font-size: 1rem;
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
 }
 
-.form-group textarea {
-    min-height: 120px;
-    resize: vertical;
+.outline-btn {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    background-color: var(--card-background);
+.secondary-btn {
+    background: var(--accent-bg);
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+.btn:hover { transform: translateY(-3px); opacity: 0.9; }
+
+/* Prediction Result Bars */
+#result-container { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--accent-bg); }
+
+.prediction-bar-container { margin-bottom: 1.2rem; text-align: left; }
+.prediction-label { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600; }
+.bar-bg { background: var(--accent-bg); height: 12px; border-radius: 6px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--primary-color); width: 0; transition: width 0.5s ease-out; }
+
+/* Contact Form */
+.contact-card { text-align: left; }
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.form-group input, .form-group textarea {
+    padding: 0.8rem; border-radius: 10px; border: 1px solid var(--accent-bg);
+    background: var(--background-color); color: var(--text-color);
 }

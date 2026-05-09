@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's for Dinner? - Menu Recommendation</title>
+    <title>Animal Face Test - Which animal do I look like?</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body>
     <div class="top-bar">
@@ -18,15 +20,34 @@
     </div>
     <main class="container">
         <div class="card">
-            <h1>🍴 What's for Dinner?</h1>
-            <div class="menu-display">
-                <span id="recommended-menu">Pick a menu!</span>
+            <h1>🐶 Animal Face Test</h1>
+            <p class="subtitle">AI-powered analysis of your animal face type</p>
+            
+            <div id="upload-area" class="test-area">
+                <div id="webcam-container"></div>
+                <img id="image-preview" style="display:none;" />
+                <div id="placeholder-text">
+                    <p>Start webcam or upload a photo</p>
+                </div>
             </div>
-            <button class="btn" id="generate-btn">Get Recommendation</button>
+
+            <div class="btn-group">
+                <button class="btn" id="webcam-btn">📸 Start Webcam</button>
+                <label for="file-upload" class="btn outline-btn">
+                    📁 Upload Photo
+                    <input type="file" id="file-upload" accept="image/*" style="display:none;">
+                </label>
+            </div>
+            
+            <div id="result-container" style="display:none;">
+                <h2 id="result-title">Analysis Results</h2>
+                <div id="label-container"></div>
+                <button class="btn secondary-btn" id="reset-btn">Try Again</button>
+            </div>
         </div>
 
         <div class="card contact-card">
-            <h2>🤝 Partnership & Suggestions</h2>
+            <h2>🤝 Partnership & Inquiries</h2>
             <form action="https://formspree.io/f/mojrkyyl" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -34,7 +55,7 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Suggest a menu or leave a partnership inquiry." required></textarea>
+                    <textarea id="message" name="message" placeholder="Leave your message here." required></textarea>
                 </div>
                 <button type="submit" class="btn">Send Message</button>
             </form>
