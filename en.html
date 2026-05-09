@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's for Dinner? - Menu Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="lang-switch">
+            <a href="index.html">KO</a> | <a href="en.html" class="active">EN</a>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-btn">Dark Mode</button>
+        </div>
+    </div>
+    <main class="container">
+        <div class="card">
+            <h1>🍴 What's for Dinner?</h1>
+            <div class="menu-display">
+                <span id="recommended-menu">Pick a menu!</span>
+            </div>
+            <button class="btn" id="generate-btn">Get Recommendation</button>
+        </div>
+
+        <div class="card contact-card">
+            <h2>🤝 Partnership & Suggestions</h2>
+            <form action="https://formspree.io/f/mojrkyyl" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Suggest a menu or leave a partnership inquiry." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+    <script src="main_en.js"></script>
+</body>
+</html>
