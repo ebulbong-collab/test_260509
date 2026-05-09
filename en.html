@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Face Test - Which animal do I look like?</title>
+    <title>Animal Face Test - AI Analysis</title>
+    <meta name="description" content="Discover which animal you look like with AI analysis. Test your dog, cat, and other animal face types.">
     <meta name="google-adsense-account" content="ca-pub-9456159487265654">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9456159487265654"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9456159487265654" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
@@ -45,9 +45,18 @@
             <div id="result-container" style="display:none;">
                 <h2 id="result-title">Analysis Results</h2>
                 <div id="label-container"></div>
+                <div id="result-description" class="result-text"></div>
                 <button class="btn secondary-btn" id="reset-btn">Try Again</button>
             </div>
         </div>
+
+        <section class="card info-section">
+            <h2>🤔 What is Animal Face Test?</h2>
+            <p>This service is an AI tool that analyzes facial features using Google's Teachable Machine technology to find the animal you look like most. The AI, trained on thousands of animal face data, analyzes your impression.</p>
+            <h3>How to use?</h3>
+            <p>1. Click 'Start Webcam' to analyze in real-time.<br>2. Upload a photo of your face for analysis.</p>
+            <p>※ All images are processed locally in your browser and never sent to a server. Your privacy is protected!</p>
+        </section>
 
         <div class="card contact-card">
             <h2>🤝 Partnership & Inquiries</h2>
@@ -64,6 +73,15 @@
             </form>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Animal Face Test. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Use</a>
+        </div>
+    </footer>
+
     <script src="main_en.js"></script>
 </body>
 </html>
