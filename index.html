@@ -28,14 +28,14 @@
     <meta property="og:url" content="https://animal.trendzins.com/">
     <meta property="og:title" content="동물상 테스트 - AI가 분석하는 나의 닮은 동물 찾기">
     <meta property="og:description" content="AI 인공지능이 분석하는 나의 동물상 테스트! 사진 한 장으로 당신과 가장 닮은 동물을 찾아보세요.">
-    <meta property="og:image" content="https://animal.trendzins.com/favicon.ico">
+    <meta property="og:image" content="https://animal.trendzins.com/og-image.svg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://animal.trendzins.com/">
     <meta property="twitter:title" content="동물상 테스트 - AI가 분석하는 나의 닮은 동물 찾기">
     <meta property="twitter:description" content="AI 인공지능이 분석하는 나의 동물상 테스트! 사진 한 장으로 당신과 가장 닮은 동물을 찾아보세요.">
-    <meta property="twitter:image" content="https://animal.trendzins.com/favicon.ico">
+    <meta property="twitter:image" content="https://animal.trendzins.com/og-image.svg">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -48,23 +48,62 @@
     <link rel="alternate" hreflang="x-default" href="https://animal.trendzins.com/" />
 
     <meta name="google-adsense-account" content="ca-pub-9456159487265654">
+    <meta name="robots" content="max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "동물상 테스트 (Animal Face Test)",
-      "url": "https://animal.trendzins.com/",
-      "description": "인공지능(AI) 기술을 사용하여 사용자의 얼굴과 가장 닮은 동물상을 찾아주는 무료 온라인 서비스입니다.",
-      "applicationCategory": "EntertainmentApplication",
-      "operatingSystem": "All",
-      "browserRequirements": "Requires JavaScript and HTML5 support",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "KRW"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "url": "https://animal.trendzins.com/",
+          "name": "동물상 테스트",
+          "inLanguage": "ko-KR",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Trendzins",
+            "url": "https://animal.trendzins.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://animal.trendzins.com/favicon.ico"
+            }
+          }
+        },
+        {
+          "@type": "WebApplication",
+          "name": "동물상 테스트 (Animal Face Test)",
+          "url": "https://animal.trendzins.com/",
+          "description": "인공지능(AI) 기술을 사용하여 사용자의 얼굴과 가장 닮은 동물상을 찾아주는 무료 온라인 서비스입니다.",
+          "applicationCategory": "EntertainmentApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript and HTML5 support",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW"
+          }
+        },
+        {
+            "@type": "Organization",
+            "name": "Trendzins",
+            "url": "https://animal.trendzins.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://animal.trendzins.com/favicon.ico"
+            }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://animal.trendzins.com/"
+          }]
+        }
+      ]
     }
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9456159487265654" crossorigin="anonymous"></script>

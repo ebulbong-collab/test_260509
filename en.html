@@ -12,14 +12,14 @@
     <meta property="og:url" content="https://animal.trendzins.com/en.html">
     <meta property="og:title" content="Animal Face Test - AI-Powered Analysis to Find Your Look-Alike Animal">
     <meta property="og:description" content="Discover which animal you look like with AI analysis. Test your look-alike animal using just one photo.">
-    <meta property="og:image" content="https://animal.trendzins.com/favicon.ico">
+    <meta property="og:image" content="https://animal.trendzins.com/og-image.svg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://animal.trendzins.com/en.html">
     <meta property="twitter:title" content="Animal Face Test - AI-Powered Analysis to Find Your Look-Alike Animal">
     <meta property="twitter:description" content="Discover which animal you look like with AI analysis. Test your look-alike animal using just one photo.">
-    <meta property="twitter:image" content="https://animal.trendzins.com/favicon.ico">
+    <meta property="twitter:image" content="https://animal.trendzins.com/og-image.svg">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -32,6 +32,8 @@
     <link rel="alternate" hreflang="x-default" href="https://animal.trendzins.com/" />
 
     <meta name="google-adsense-account" content="ca-pub-9456159487265654">
+    <meta name="robots" content="max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#ffffff">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9456159487265654" crossorigin="anonymous"></script>
     
     <!-- Google tag (gtag.js) -->                                                                                        
@@ -55,18 +57,55 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Animal Face Test",
-      "url": "https://animal.trendzins.com/en.html",
-      "description": "A free online service that uses AI technology to find the animal face that most resembles the user's face.",
-      "applicationCategory": "EntertainmentApplication",
-      "operatingSystem": "All",
-      "browserRequirements": "Requires JavaScript and HTML5 support",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "url": "https://animal.trendzins.com/en.html",
+          "name": "Animal Face Test",
+          "inLanguage": "en-US",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Trendzins",
+            "url": "https://animal.trendzins.com/en.html",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://animal.trendzins.com/favicon.ico"
+            }
+          }
+        },
+        {
+          "@type": "WebApplication",
+          "name": "Animal Face Test",
+          "url": "https://animal.trendzins.com/en.html",
+          "description": "A free online service that uses AI technology to find the animal face that most resembles the user's face.",
+          "applicationCategory": "EntertainmentApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript and HTML5 support",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+            "@type": "Organization",
+            "name": "Trendzins",
+            "url": "https://animal.trendzins.com/en.html",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://animal.trendzins.com/favicon.ico"
+            }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://animal.trendzins.com/en.html"
+          }]
+        }
+      ]
     }
     </script>
 
