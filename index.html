@@ -45,6 +45,11 @@
     <link rel="canonical" href="https://animal.trendzins.com/" />
     <link rel="alternate" hreflang="ko" href="https://animal.trendzins.com/" />
     <link rel="alternate" hreflang="en" href="https://animal.trendzins.com/en.html" />
+    <link rel="alternate" hreflang="ja" href="https://animal.trendzins.com/index.html?lang=ja" />
+    <link rel="alternate" hreflang="zh" href="https://animal.trendzins.com/index.html?lang=zh" />
+    <link rel="alternate" hreflang="es" href="https://animal.trendzins.com/index.html?lang=es" />
+    <link rel="alternate" hreflang="fr" href="https://animal.trendzins.com/index.html?lang=fr" />
+    <link rel="alternate" hreflang="de" href="https://animal.trendzins.com/index.html?lang=de" />
     <link rel="alternate" hreflang="x-default" href="https://animal.trendzins.com/" />
 
     <meta name="google-adsense-account" content="ca-pub-9456159487265654">
@@ -194,5 +199,11 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('en')) {
+            window.location.href = 'en.html';
+        }
+    </script>
 </body>
 </html>
